@@ -2,9 +2,13 @@ import express from "express"
 import dotenv from "dotenv"
 import connectDB from "./config/db.js"
 import cors from "cors"
+import { createMovie } from "./controllers/movieController.js"
 
 dotenv.config()
 const app = express();
+app.use(express.json())
+app.use(cors())
+app.post("/api/create",createMovie)
 
 const startServer = async () => {
     try {

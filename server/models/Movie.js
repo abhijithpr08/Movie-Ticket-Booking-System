@@ -10,11 +10,11 @@ const MovieSchema = new mongoose.Schema({
         required: true
     },
     ShowTime: {
-        type: Date,
+        type: String,
         required: true
     },
     Date: {
-        type: Date,
+        type: String,
         required: true
     },
     TotalSeats: {
